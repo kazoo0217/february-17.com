@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Comfortaa:400,300,700);
+
+$color-black: #333;
+$color-main: #446eff;
+$color-bg: #DCEBDD;
+
+@import "normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.8;
+  background-color: $color-bg;
+}
+
+h1 {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 34px;
+  font-weight: 300;
+  text-align: center;
+  margin:30px 0;
+  text-shadow: 0 1px 0 #fff;
+}
+h2 {
+  text-align: center;
+}
+
+ul {
+  margin:1em 0;
+  padding-left:0;
+  list-style: none;
+}
+
+code {
+  font-family: 'Inconsolata', monospace;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  color: $color-main;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.logo {
+  max-width:100%;
+  margin:30px 0;
+  text-align: center;
+  img {
+    width: 220px;
+  }
+}
+
+.main-copy {
+  font-weight: 500;
+  code {
+    &::after {
+      content: '|';
+      animation: blink .5s infinite alternate;
+      font-family: serif;
+    }
+  }
+}
+
+@keyframes blink{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.link {
+  text-align: center;
+  line-height: 2;
+  font-family: 'Inconsolata', monospace;
+}
